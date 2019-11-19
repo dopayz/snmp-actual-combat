@@ -148,7 +148,7 @@ public class Snmp4jUtils {
         }
         return result;
     }
-    //获取磁盘使用率getChinese(values[1].getVariable().toString()).split(":")[0]
+    //获取磁盘使用率
     public static LinkedHashMap<String,Long> diskRateUse(String ip){
         LinkedHashMap<String,Long> result = new LinkedHashMap<>();
         TransportMapping transport = null;

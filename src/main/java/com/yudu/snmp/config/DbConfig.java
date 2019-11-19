@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 public class DbConfig {
     @Value("${spring.datasource.url}")
     public String dbUrl;
-    @Value("${spring.datasource.username}")
+    @Value("${spring.datasource.data-username}")
     public String dbUserName;
-    @Value("${spring.datasource.password}")
+    @Value("${spring.datasource.data-password}")
     public String dbPassword;
     @Value("${spring.datasource.driver-class-name}")
     public String dbDriverClassName;

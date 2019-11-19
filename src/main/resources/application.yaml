@@ -1,0 +1,21 @@
+server:
+  address: 8383
+# 数据库配置
+spring:
+  datasource:
+    url: jdbc:sqlserver://192.168.1.9:1433;DatabaseName=traveloa_test
+    data-username: root
+    data-password: root
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+mybatis:
+  type-aliases-package: com.yudu.snmp.pojo
+# 短信模板
+smsTemplate: 【ip】服务器，CPU使用率【cpuRateUse】%超过预警值【cpuRateUseThreshold】%，内存使用率【memoryRateUse】%超过预警值【memoryRateUseThreshold】%，【盘使用率】，IIS服务停止运行，OA系统停止运行。
+# 阀值
+cpuRateUseThreshold: 70
+memoryRateUseThreshold: 70
+diskRateUseThreshold: 70
+# ip列表
+ips: 192.168.1.9,192.168.1.166
+# 手机号码列表
+iphones: 19923295262,15823122547
