@@ -300,7 +300,7 @@ public class SnmpUtils {
             target = new CommunityTarget();
             target.setCommunity(new OctetString("public"));
             target.setRetries(2);
-            target.setAddress(GenericAddress.parse("udp:127.0.0.1/161"));
+            target.setAddress(GenericAddress.parse("udp:"+ip+"/161"));
             target.setTimeout(8000);
             target.setVersion(SnmpConstants.version2c);
             TableUtils tableUtils = new TableUtils(snmp, new PDUFactory() {
