@@ -299,7 +299,7 @@ public class Snmp4jUtils {
             target = new CommunityTarget();
             target.setCommunity(new OctetString("public"));
             target.setRetries(2);
-            target.setAddress(GenericAddress.parse("udp:127.0.0.1/161"));
+            target.setAddress(GenericAddress.parse("udp:"+ip+"/161"));
             target.setTimeout(8000);
             target.setVersion(SnmpConstants.version2c);
             TableUtils tableUtils = new TableUtils(snmp, new PDUFactory() {
@@ -343,8 +343,7 @@ public class Snmp4jUtils {
                 for(TableEvent event : udplist){
                     VariableBinding[] values = event.getColumns();
                     if(values == null) continue;
-                    String name = values[0].getVariable().toString();//name
-                    result.add(values[1].getVariable().toString());
+                    result.add(values[0].getVariable().toString());
                 }
             }
         } catch(Exception e){
